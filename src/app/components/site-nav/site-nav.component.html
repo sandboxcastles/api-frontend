@@ -1,5 +1,25 @@
-<ul>
-  <li><a [routerLink]="['/']">Home</a></li>
-  <li><a [routerLink]="['/', 'hpotter']">Harry Potterland</a></li>
-  <li><a [routerLink]="['/', 'acnh']">Animal Crossing: New Horizons</a></li>
-</ul>
+<mat-toolbar color="primary">
+  <span>Happytime Playland</span>
+  <span class="example-spacer"></span>
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button [routerLink]="['/']" mat-menu-item>
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </button>
+    <button [routerLink]="['/', 'hpotter']" mat-menu-item>
+      <mat-icon>book</mat-icon>
+      <span>Harry Potterland</span>
+    </button>
+    <button [routerLink]="['/', 'acnh']" mat-menu-item>
+      <mat-icon>pets</mat-icon>
+      <span>Animal Crossing: New Horizons</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
