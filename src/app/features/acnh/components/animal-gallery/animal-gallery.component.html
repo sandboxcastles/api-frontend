@@ -1,0 +1,16 @@
+<div class="gallery-content">
+  <input type="text" [formControl]="filter" placeholder="Filter states..." />
+  <div fxLayout="row wrap" *ngIf="animals$ | async as animals">
+    <app-gallery-card
+      fxFlex="25%"
+      class="gallery-card"
+      *ngFor="let animal of animals"
+      [item]="animal"
+    >
+      <img *ngIf="showIcon" mat-card-image [src]="animal.icon_uri" />
+      <mat-card-content>
+        <p>Price: {{ animal.price || "NA" }}</p>
+      </mat-card-content>
+    </app-gallery-card>
+  </div>
+</div>

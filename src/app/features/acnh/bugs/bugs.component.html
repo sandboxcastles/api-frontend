@@ -1,0 +1,6 @@
+<div class="flex-container flex-container__center">
+  <app-animal-gallery
+    *ngIf="bugs$ | async as bugs"
+    [animals]="bugs"
+  ></app-animal-gallery>
+</div>

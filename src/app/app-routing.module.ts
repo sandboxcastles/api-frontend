@@ -10,6 +10,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./features/hpotter/hpotter.module').then((m) => m.HpotterModule),
   },
+  {
+    path: 'acnh',
+    loadChildren: () =>
+      import('./features/acnh/acnh.module').then((m) => m.AcnhModule),
+  },
 ];
 
 @NgModule({

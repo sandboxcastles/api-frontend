@@ -1,0 +1,8 @@
+<ng-container *ngIf="spells">
+  <h2>Spells</h2>
+  <ng-container *ngFor="let spell of spells">
+    <h3>{{ spell.spell }}</h3>
+    <p class="spell-indent">Type: {{ spell.type }}</p>
+    <p class="spell-indent">Effect: {{ spell.effect }}</p>
+  </ng-container>
+</ng-container>

@@ -1,0 +1,20 @@
+<div class="gallery-content" fxLayout="row wrap" *ngIf="items">
+  <app-gallery-card *ngFor="let item of items" [item]="item">
+    <mat-card-content>
+      <p>Price: {{ item.price || "NA" }}</p>
+    </mat-card-content>
+  </app-gallery-card>
+  <!-- <mat-card fxFlex="25%" class="gallery-card" *ngFor="let item of items">
+    <mat-card-header>
+      <mat-card-title>{{ item["file-name"] }}</mat-card-title>
+    </mat-card-header>
+    <img *ngIf="showImage" mat-card-image [src]="item.image_uri" />
+    <ng-content></ng-content>
+    <mat-card-content>
+      <p>Price: {{ item.price || "NA" }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button> <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card> -->
+</div>
